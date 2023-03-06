@@ -1,15 +1,23 @@
-<script setup>
-import { ref } from 'vue'
-const contador = ref (10)
-function incrementar (){
-  contador.value++
-}
-function decrementar(){
-  if (contador.value > 0)
-  contador.value--
-}
-function reset(){
-  contador.value = 0
+<script>
+export default {
+  data(){
+    return { 
+      contador: 10
+  }
+  },
+  methods:{
+    incrementar(){
+      this.contador++
+    },
+    decrementar (){
+      if (this.contador > 0) {
+        this.contador--
+      }
+    },
+    reset(){
+      this.contador = 0
+    }
+  }
 }
 </script>
 
